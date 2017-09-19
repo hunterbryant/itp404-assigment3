@@ -33,6 +33,8 @@
 		var geocoder;
 
 		function initMap() {
+			var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
 			initialPosition = new google.maps.LatLng(-34.397, 150.644);
 
 			map = new google.maps.Map(document.getElementById('map'), {
@@ -43,7 +45,8 @@
 			marker = new google.maps.Marker({
 				map: map,
 				position: initialPosition,
-				animation: google.maps.Animation.DROP
+				animation: google.maps.Animation.DROP,
+				icon: 'Desktop.png'
 			});
 
 			marker.addListener('click', function() {
